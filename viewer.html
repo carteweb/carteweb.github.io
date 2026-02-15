@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reading Mode</title>
     <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
     <script src="https://unpkg.com/page-flip/dist/js/page-flip.browser.js"></script>
 </head>
 <body class="reader-mode">
 
     <div class="ui-bar">
-        <a href="index.html" class="back-btn">← Rje3 l-Library</a>
-        <span id="book-title">Loading...</span>
+        <a href="index.html" class="back-btn">← Back to Library</a>
+        <span id="page-count">Loading...</span>
     </div>
 
     <div class="book-container">
-        <div id="book">
-            </div>
+        <div id="book"></div>
     </div>
 
+    <div class="sidebar" id="sidebar">
+        <h3>Chapters</h3>
+        <ul id="chapter-list"></ul>
+    </div>
+
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
