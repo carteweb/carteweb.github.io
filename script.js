@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
-const bookUrl = urlParams.get('book');
+const bookUrl = urlParams.get('file');
 
-if (!bookUrl) {
+if (!file) {
     alert("Eroare1");
     window.location.href = 'index.html';
 }
