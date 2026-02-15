@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const bookUrl = urlParams.get('book');
 
 if (!bookUrl) {
-    alert("Ma khtariti ta ktab! Reje3 l-library.");
+    alert("Eroare1");
     window.location.href = 'index.html';
 }
 
@@ -39,7 +39,7 @@ fetch(bookUrl)
     })
     .catch(err => {
         console.error(err);
-        alert("Wqe3 mochkil f chargement d l-ktab.");
+        alert("Eroare2");
     });
 
 function organizePages(contentElements) {
